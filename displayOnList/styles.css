@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+ul{
+  background-color: black;
+  width: 9rem;
+  padding: 1rem;
+  border-radius: .25rem;
+}
+
+li{
+  list-style: '⚽' inside;
+  text-decoration: underline overline white;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}

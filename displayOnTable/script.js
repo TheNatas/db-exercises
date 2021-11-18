@@ -1,4 +1,4 @@
-fetch('select.php')
+fetch('../select.php')
   .catch(err => console.log(err))
   .then(res => res.json())
   .then(data => {

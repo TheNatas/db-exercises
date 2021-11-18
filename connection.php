@@ -1,4 +1,9 @@
 <?php
 
 $con = new mysqli('localhost', 'root', '', 'exercises');
-mysqli_query($con, 'INSERT INTO times VALUES (1, "São Paulo", "SP")');
+
+$prepared_statement = $con->prepare('INSERT INTO times VALUES (NULL, ?, ?)');
+$prepared_statement->bind_param('ss', $_POST['nome'], $_POST['estado']);
+$prepared_statement->execute();
+
+?>
