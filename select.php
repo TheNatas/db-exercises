@@ -14,7 +14,8 @@ if ($result){
 
     $results_arr[] = $result_obj;
   }
-  echo json_encode($results_arr);
+  
 }
+echo json_encode($results_arr);
 
 ?>
