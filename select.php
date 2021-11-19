@@ -1,5 +1,6 @@
 <?php
 header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
 
 $con = new mysqli('localhost', 'root', '', 'exercises');
 $result = mysqli_query($con, 'SELECT * FROM times');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Nov-2021 às 17:50
+-- Tempo de geração: 19-Nov-2021 às 17:42
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 7.4.25
 
@@ -38,7 +38,11 @@ CREATE TABLE `times` (
 --
 
 INSERT INTO `times` (`codigo`, `nome`, `estado`) VALUES
-(0, 'Santos', 'SP');
+(1, 'Santos', 'SP'),
+(2, 'São Paulo', 'SP'),
+(3, 'Corinthians', 'SP'),
+(4, 'Palmeiras', 'SP'),
+(6, 'Grêmio', 'RS');
 
 --
 -- Índices para tabelas despejadas
@@ -49,6 +53,16 @@ INSERT INTO `times` (`codigo`, `nome`, `estado`) VALUES
 --
 ALTER TABLE `times`
   ADD PRIMARY KEY (`codigo`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `times`
+--
+ALTER TABLE `times`
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
