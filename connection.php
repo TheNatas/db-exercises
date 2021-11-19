@@ -1,4 +1,5 @@
 <?php
+header('Location: http://localhost/exercises/displayOnTable/index.html');
 
 $con = new mysqli('localhost', 'root', '', 'exercises');
 
