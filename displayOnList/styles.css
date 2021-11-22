@@ -14,7 +14,7 @@ ul{
 
 li{
   list-style: '⚽' inside;
-  text-decoration: underline overline white;
+  border: solid thin white;
   color: white;
   font-family: 'Roboto', sans-serif;
 }
