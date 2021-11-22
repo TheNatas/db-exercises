@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  margin: 1rem;
+  background-color: #EAEAEA;
+}
+
+hr{
+  margin: 0 0 0.55rem 0;
+  width: 25%;
+  display: inline-block;
+}
+
+#name, #estado-select, option{
+  width: 15%;
+  display: inline-block;
+  text-align: start;
+}
+
+input::placeholder{
+  font-style: italic;
+}
