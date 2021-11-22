@@ -1,0 +1,13 @@
+body{
+  margin: 1rem;
+}
+
+#home-team, #away-team{
+  width: 15%;
+  display: inline-block;
+}
+
+#home-team-goals, #away-team-goals{
+  width: 4%;
+  display: inline-block;
+}
