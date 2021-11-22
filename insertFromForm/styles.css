@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 *{
-  text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -10,16 +9,35 @@ body{
   background-color: #EAEAEA;
 }
 
+form{
+  text-align: center;
+}
+
+label{
+  position: absolute;
+}
+#label-nome{
+  top: 5.25rem;
+  left: 36rem
+}
+#label-estado{
+  top: 8.65rem;
+  left: 35.75rem;
+}
+#label-img{
+  top: 12rem;
+  left: 35rem;
+}
+
 hr{
   margin: 0 0 0.55rem 0;
   width: 25%;
   display: inline-block;
 }
 
-#name, #estado-select, option{
+#name, #estado-select, option, #img-url-input{
   width: 15%;
   display: inline-block;
-  text-align: start;
 }
 
 input::placeholder{

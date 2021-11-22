@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Nov-2021 às 17:47
+-- Tempo de geração: 22-Nov-2021 às 19:51
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 7.4.25
 
@@ -73,19 +73,17 @@ INSERT INTO `estados` (`estado`) VALUES
 CREATE TABLE `times` (
   `codigo` int(11) NOT NULL,
   `nome` varchar(20) DEFAULT NULL,
-  `estado` varchar(2) DEFAULT NULL
+  `estado` varchar(2) DEFAULT NULL,
+  `url` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `times`
 --
 
-INSERT INTO `times` (`codigo`, `nome`, `estado`) VALUES
-(1, 'Santos', 'SP'),
-(2, 'São Paulo', 'SP'),
-(3, 'Corinthians', 'SP'),
-(4, 'Palmeiras', 'SP'),
-(5, 'Grêmio', 'RS');
+INSERT INTO `times` (`codigo`, `nome`, `estado`, `url`) VALUES
+(1, 'Santos', 'SP', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Santos_logo.svg/1200px-Santos_logo.svg.png'),
+(2, 'São Paulo', 'SP', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/1200px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png');
 
 --
 -- Índices para tabelas despejadas
@@ -111,7 +109,7 @@ ALTER TABLE `times`
 -- AUTO_INCREMENT de tabela `times`
 --
 ALTER TABLE `times`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

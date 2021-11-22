@@ -15,12 +15,17 @@
     <h2 class="mb-0">Inserir Novo Time</h2>
     <hr>
     <div class="mb-3">
-      <label for="name" class="form-label">Nome</label> 
+      <label for="name" class="form-label" id="label-nome">Nome:</label> 
       <input name="nome" type="text" placeholder="Nome" class="form-control" id="name">
     </div>
     <div class="mb-3">
-      <label for="estado-select" class="form-label">Estado</label> 
+      <label for="estado-select" class="form-label" id="label-estado">Estado:</label> 
       <select name="estado" class="form-select" id="estado-select"></select>
+    </div>
+    <div class="mb-3">
+      <label for="img-url-input" class="form-label" id="label-img">Imagem:</label>
+      <input name="url" type="url" class="form-control" id="img-url-input" aria-describedby="img-input-description">
+      <div id="img-input-description" class="form-text">Insira a URL da imagem</div>
     </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
   </form>

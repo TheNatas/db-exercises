@@ -12,6 +12,7 @@ if ($result){
     $result_obj->codigo = $obj->codigo;
     $result_obj->nome = $obj->nome;
     $result_obj->estado = $obj->estado;
+    $result_obj->url = $obj->url;
 
     $results_arr[] = $result_obj;
   }

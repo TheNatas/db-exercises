@@ -6,7 +6,10 @@ fetch('../select.php')
     data.forEach(row => {
       const li = document.createElement('li');
       li.textContent = `|${row.codigo}|${row.nome}|${row.estado}`;
+      const img = document.createElement('img');
+      img.setAttribute('src', row.url);
       ul.appendChild(li);
+      ul.appendChild(img);
     })
     document.querySelector('body').appendChild(ul);
   })
