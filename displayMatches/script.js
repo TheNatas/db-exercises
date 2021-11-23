@@ -1,6 +1,6 @@
-fetch('../selectMatches.php')
-  .then(res => res.json())
-  .then(data => data.forEach(row => {
+const displayOnTable = data => {
+  document.querySelector('tbody').innerHTML = '';
+  data.forEach(row => {
     const tr = document.createElement('tr');
 
     const tdDate = document.createElement('td');
@@ -25,4 +25,30 @@ fetch('../selectMatches.php')
     tr.appendChild(tdAwayTeam);
 
     document.querySelector('tbody').appendChild(tr);
-  }))
+})};
+
+
+const filter = async function(e){
+  e.preventDefault();
+  const reqBody = {
+    initial_datetime: this.querySelector('#initial-datetime').value,
+    final_datetime: this.querySelector('#final-datetime').value
+  }
+
+  const res = await fetch('../selectFilteredMatches.php', {
+    method: 'POST',
+    body: JSON.stringify(reqBody),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  
+  const data = await res.json();
+  displayOnTable(data);
+};
+
+fetch('../selectMatches.php')
+  .then(res => res.json())
+  .then(displayOnTable);
+
+document.querySelector('form').addEventListener('submit', filter);

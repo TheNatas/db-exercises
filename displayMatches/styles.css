@@ -1,3 +1,17 @@
-table{
+body{
   text-align: center;
+  margin: 1rem;
+}
+
+#initial-datetime, #final-datetime{
+  width: 15%;
+  display: inline-block;
+}
+
+hr{
+  margin: 2rem 0 1.5rem 0;
+}
+
+::placeholder{
+  font-style: italic;
 }
