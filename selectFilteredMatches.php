@@ -4,9 +4,7 @@ header("Access-Control-Allow-Origin: *");
 
 $con = new mysqli('localhost', 'root', '', 'exercises');
 
-$data = file_get_contents('php://input');
-
-$data = json_decode($data);
+$data = json_decode(file_get_contents('php://input'));
 
 $prepared_statement = $con->prepare('SELECT * FROM partidas WHERE DATE(data) BETWEEN ? AND ?');
 $prepared_statement->bind_param('ss', $data->initial_datetime, $data->final_datetime);
