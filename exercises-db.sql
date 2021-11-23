@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Nov-2021 às 20:03
+-- Tempo de geração: 23-Nov-2021 às 20:28
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 7.4.25
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `exercises`
 --
+CREATE DATABASE IF NOT EXISTS `exercises` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `exercises`;
 
 -- --------------------------------------------------------
 
@@ -63,6 +65,31 @@ INSERT INTO `estados` (`estado`) VALUES
 ('SE'),
 ('SP'),
 ('TO');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `partidas`
+--
+
+CREATE TABLE `partidas` (
+  `data` datetime DEFAULT NULL,
+  `time_mandante` varchar(20) DEFAULT NULL,
+  `gols_time_mandante` int(11) DEFAULT NULL,
+  `time_visitante` varchar(20) DEFAULT NULL,
+  `gols_time_visitante` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `partidas`
+--
+
+INSERT INTO `partidas` (`data`, `time_mandante`, `gols_time_mandante`, `time_visitante`, `gols_time_visitante`) VALUES
+('2021-11-22 17:22:31', 'Santos', 2, 'Corinthians', 0),
+('2021-11-22 17:31:15', 'São Paulo', 1, 'Palmeiras', 2),
+('2021-11-23 14:15:35', 'Palmeiras', 0, 'Corinthians', 1),
+('2021-11-23 16:21:25', NULL, NULL, NULL, NULL),
+('2021-11-23 16:21:33', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
