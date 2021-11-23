@@ -1,5 +1,6 @@
 body{
   margin: 1rem;
+  text-align: center;
 }
 
 #home-team, #away-team{
@@ -10,4 +11,13 @@ body{
 #home-team-goals, #away-team-goals{
   width: 4%;
   display: inline-block;
+}
+
+hr{
+  width: 50%;
+  display: inline-block;
+}
+
+button{
+  margin: 0.5rem;
 }
