@@ -1,7 +1,7 @@
 const displayMessage = function(message){
-  document.querySelector('#error-message').classList.toggle('visually-hidden');
+  document.querySelector('#error-message').classList.remove('visually-hidden');
   document.querySelector('input').addEventListener('input', () => {
-    document.querySelector('#error-message').classList.toggle('visually-hidden');
+    document.querySelector('#error-message').classList.add('visually-hidden');
   }, {once: true})
 }
 
