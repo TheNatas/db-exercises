@@ -1,7 +1,23 @@
+const deleteMatch = async function(e){ // TODO
+  const matchRow = this.parentNode.parentNode.childNodes;
+  
+  await fetch('../deleteMatch.php', {
+    method: 'POST',
+    body: JSON.stringify({data: matchRow[0].innerText}),
+  });
+  location.reload();
+};
+
 const displayOnTable = data => {
   document.querySelector('tbody').innerHTML = '';
   data.forEach(row => {
     const tr = document.createElement('tr');
+
+    const btnDelete = document.createElement('button');
+    btnDelete.textContent = 'x';
+    btnDelete.classList.add('btn');
+    btnDelete.classList.add('btn-danger');
+    btnDelete.addEventListener('click', deleteMatch);
 
     const tdDate = document.createElement('td');
     const tdHomeTeam = document.createElement('td');
@@ -9,6 +25,7 @@ const displayOnTable = data => {
     const tdX = document.createElement('td');
     const tdAwayTeamGoals = document.createElement('td');
     const tdAwayTeam = document.createElement('td');
+    const tdDelete = document.createElement('td');
 
     tdDate.textContent = row.data;
     tdHomeTeam.textContent = row.time_mandante;
@@ -16,6 +33,7 @@ const displayOnTable = data => {
     tdX.textContent = 'x';
     tdAwayTeamGoals.textContent = row.gols_time_visitante;
     tdAwayTeam.textContent = row.time_visitante;
+    tdDelete.appendChild(btnDelete);
 
     tr.appendChild(tdDate);
     tr.appendChild(tdHomeTeam);
@@ -23,6 +41,7 @@ const displayOnTable = data => {
     tr.appendChild(tdX);
     tr.appendChild(tdAwayTeamGoals);
     tr.appendChild(tdAwayTeam);
+    tr.appendChild(tdDelete);
 
     document.querySelector('tbody').appendChild(tr);
 })};
