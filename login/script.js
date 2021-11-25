@@ -16,6 +16,10 @@ const submitForm = function(e){
   })
   .then(res => {
     if (res.status === 400) displayMessage('Usuário já cadastrado');
+    else {
+      document.querySelector('input').value = '';
+      document.querySelectorAll('input')[1].value = '';
+    }
   })
 };
 
