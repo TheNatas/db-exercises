@@ -3,14 +3,30 @@ const getTeamsByState = async () => {
   const rows = await res.json();
   const data = {
     labels: rows.map(row => row.estado),
-    series: [rows.map(row => row.quantidade)]
+    series: rows.map(row => row.quantidade)
   }
   const options = {
-    width: 1450,
-    height: 700
-  }
+    labelInterpolationFnc: function(value) {
+      return value[0]
+    }
+  };
   
-  new Chartist.Bar('.ct-chart', data, options);
+  const responsiveOptions = [
+    ['screen and (min-width: 640px)', {
+      chartPadding: 30,
+      labelOffset: 100,
+      labelDirection: 'explode',
+      labelInterpolationFnc: function(value) {
+        return value;
+      }
+    }],
+    ['screen and (min-width: 1024px)', {
+      labelOffset: 80,
+      chartPadding: 20
+    }]
+  ];
+  
+  new Chartist.Pie('.ct-chart', data, options, responsiveOptions);
 }
 
 getTeamsByState();
