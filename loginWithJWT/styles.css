@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+*{
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+}
+
+body{
+  margin: 1rem;
+  background-color: #E6DF9A;
+}
+
+form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25rem;
+  border: solid thin;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: .2rem .2rem 1rem .75rem rgba(0, 0, 0, 0.6);
+}
+
+form h2{
+  margin-bottom: 1rem;
+}
+
+form input{
+  margin-bottom: 1rem;
+}
+
+::placeholder{
+  font-style: italic;
+}
