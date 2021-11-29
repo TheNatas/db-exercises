@@ -7,6 +7,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+const displayTable = () => {
+    document.querySelector('.overlay').classList.add('visually-hidden');
+    document.querySelector('.my-card').classList.add('visually-hidden');
+    document.querySelector('table').classList.remove('visually-hidden');
+};
+const displayLogin = () => {
+    document.querySelector('.overlay').classList.remove('visually-hidden');
+    document.querySelector('.my-card').classList.remove('visually-hidden');
+    document.querySelector('table').classList.add('visually-hidden');
+};
 const getUsersFromServer = () => __awaiter(this, void 0, void 0, function* () {
     const res = yield fetch('../selectUsers.php', {
         headers: {
@@ -14,7 +24,7 @@ const getUsersFromServer = () => __awaiter(this, void 0, void 0, function* () {
         }
     });
     if (res.status === 401) {
-        return [{}];
+        throw new Error('Usuário deslogado');
     }
     else {
         const data = yield res.json();
@@ -28,5 +38,7 @@ getUsersFromServer()
     td.textContent = user.login;
     tr.appendChild(td);
     document.querySelector('tbody').appendChild(tr);
-}));
+    displayTable();
+}))
+    .catch(() => displayLogin());
 //# sourceMappingURL=script.js.map

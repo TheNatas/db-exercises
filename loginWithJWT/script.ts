@@ -29,6 +29,7 @@ const submitForm = async function(e: Event) : Promise<any>{
     localStorage.setItem('token', data);
     document.querySelector('button').textContent = 'Entrou';
     document.querySelector('button').classList.replace('btn-primary', 'btn-success');
+    window.location.replace('../displayUsers/index.html');
   }
   else 
     displayError(res.status);

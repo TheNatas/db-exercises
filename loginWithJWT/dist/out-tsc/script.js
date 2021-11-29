@@ -36,6 +36,7 @@ const submitForm = function (e) {
             localStorage.setItem('token', data);
             document.querySelector('button').textContent = 'Entrou';
             document.querySelector('button').classList.replace('btn-primary', 'btn-success');
+            window.location.replace('../displayUsers/index.html');
         }
         else
             displayError(res.status);

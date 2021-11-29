@@ -1,3 +1,15 @@
+const displayTable = () => {
+  document.querySelector('.overlay').classList.add('visually-hidden');
+  document.querySelector('.my-card').classList.add('visually-hidden');
+  document.querySelector('table').classList.remove('visually-hidden');
+};
+
+const displayLogin = () => {
+  document.querySelector('.overlay').classList.remove('visually-hidden');
+  document.querySelector('.my-card').classList.remove('visually-hidden');
+  document.querySelector('table').classList.add('visually-hidden');
+};
+
 const getUsersFromServer = async (): Promise<[{}]> => {
   const res = await fetch('../selectUsers.php', {
     headers: {
@@ -5,7 +17,7 @@ const getUsersFromServer = async (): Promise<[{}]> => {
     }
   });
   if (res.status === 401){
-    return [{}];
+    throw new Error('Usuário deslogado');
   }else{
     const data = await res.json();
     return data;
@@ -19,4 +31,6 @@ getUsersFromServer()
     td.textContent = user.login;
     tr.appendChild(td);
     document.querySelector('tbody').appendChild(tr);
-  }));
+    displayTable();
+  }))
+  .catch(() => displayLogin());
