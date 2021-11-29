@@ -4,8 +4,12 @@ const getUsersFromServer = async (): Promise<[{}]> => {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     }
   });
-  const data = await res.json();
-  return data;
+  if (res.status === 401){
+    return [{}];
+  }else{
+    const data = await res.json();
+    return data;
+  }
 };
 
 getUsersFromServer()

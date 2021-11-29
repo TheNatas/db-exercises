@@ -10,7 +10,7 @@ header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
 $jwt = substr(apache_request_headers()['Authorization'], 7);
-if (!$jwt){
+if ($jwt === 'null'){
   http_response_code(401);
   exit();
 }
