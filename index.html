@@ -4,22 +4,71 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Exercises</title>
 </head>
 <body>
   <ul>
-    <li><a href="insertFromForm/index.html">Insert From Form</a></li>
-    <li><a href="displayOnTable/index.html">Display On Table</a></li>
-    <li><a href="displayOnList/index.html">Display On List</a></li>
-    <li><a href="select.php">Teams API</a></li>
-    <li><a href="numberOfTeamsByState/index.html">Number of Teams By State</a></li>
-    <li><a href="insertNewMatch/index.html">Insert New Match</a></li>
-    <li><a href="displayMatches/index.html">Display Matches</a></li>
-    <li><a href="createUser/index.html">Create User</a></li>
-    <li><a href="displayMatchesByTeamGraphic/index.html">Display Matches By Team (Graphic)</a></li>
-    <li><a href="displayTeamsByStateGraphic/index.html">Display Teams By State (Graphic)</a></li>
-    <li><a href="loginWithJWT/index.html">Login (With JWT)</a></li>
-    <li><a href="displayUsers/index.html">Display Users</a></li>
+    <li>
+      <a href="insertFromForm/index.html">Insert From Form</a>
+      <span class="visually-hidden">Insert new teams to database from a form</span>
+    </li>
+    <li>
+      <a href="displayOnTable/index.html">Display On Table</a>
+      <span class="visually-hidden">Display teams from database on a table</span>
+    </li>
+    <li>
+      <a href="displayOnList/index.html">Display On List</a>
+      <span class="visually-hidden">Display teams from database on a list</span>
+    </li>
+    <li>
+      <a href="select.php">Teams API</a>
+      <span class="visually-hidden">Display teams from database on API format</span>
+    </li>
+    <li>
+      <a href="numberOfTeamsByState/index.html">Number of Teams By State</a>
+      <span class="visually-hidden">Display number of teams from database grouped by state</span>
+    </li>
+    <li>
+      <a href="insertNewMatch/index.html">Insert New Match</a>
+      <span class="visually-hidden">Insert new match to database from a form</span>
+    </li>
+    <li>
+      <a href="displayMatches/index.html">Display Matches</a>
+      <span class="visually-hidden">Display matches from database on a table</span>
+    </li>
+    <li>
+      <a href="createUser/index.html">Create User</a>
+      <span class="visually-hidden">Create a new user and add it to the database</span>
+    </li>
+    <li>
+      <a href="displayMatchesByTeamGraphic/index.html">Display Matches By Team (Graphic)</a>
+      <span class="visually-hidden">Display number of matches of each team in a graphical view</span>
+    </li>
+    <li>
+      <a href="displayTeamsByStateGraphic/index.html">Display Teams By State (Graphic)</a>
+      <span class="visually-hidden">Display number of teams by state in a graphical view</span>
+    </li>
+    <li>
+      <a href="loginWithJWT/index.html">Login (With JWT)</a>
+      <span class="visually-hidden">Login as a registered user</span>
+    </li>
+    <li>
+      <a href="displayUsers/index.html">Display Users</a>
+      <span class="visually-hidden">Display all users from database</span>
+    </li>
   </ul>
+
+  <script>
+    const displayDescription = function() {
+      const span = this.querySelector('span');
+      span.classList.remove('visually-hidden');
+
+      this.addEventListener('mouseleave', () => {
+        span.classList.add('visually-hidden');
+      }, {once: true});
+    };
+    document.querySelectorAll('li').forEach(li => li.addEventListener('mouseenter', displayDescription));
+  </script>
 </body>
 </html>
