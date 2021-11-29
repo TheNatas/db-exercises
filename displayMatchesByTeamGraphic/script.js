@@ -9,8 +9,8 @@ const fillTeamsWithNumOfMatches = async () => {
   };
   
   const options = {
-    width: 1450,
-    height: 700
+    // width: 1000,
+    // height: 700
   }
   
   new Chartist.Bar('.ct-chart', data, options);
