@@ -17,16 +17,24 @@ label{
   position: absolute;
 }
 #label-nome{
-  top: 5.25rem;
-  left: 36rem
+  top: 5rem;
+  left: 17.75rem
 }
 #label-estado{
-  top: 8.65rem;
-  left: 35.75rem;
+  top: 8.4rem;
+  left: 17.5rem;
 }
 #label-img{
-  top: 12rem;
-  left: 35rem;
+  top: 11.75rem;
+  left: 16.65rem;
+}
+.add-player-container label{
+  top: 20.25rem;
+  left: 17.75rem;
+}
+#label-time{
+  top: 	24.6rem;
+  left: 36.65rem;
 }
 
 hr{
@@ -35,11 +43,39 @@ hr{
   display: inline-block;
 }
 
-#name, #estado-select, option, #img-url-input{
+#name, #estado-select, option, #img-url-input, .add-player-container input, #time-select{
   width: 15%;
   display: inline-block;
 }
 
 input::placeholder{
   font-style: italic;
+}
+
+#btn-add{
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  #label-nome{
+    top: 5.25rem;
+    left: 36rem
+  }
+  #label-estado{
+    top: 8.65rem;
+    left: 35.75rem;
+  }
+  #label-img{
+    top: 12rem;
+    left: 35rem;
+  }
+  .add-player-container label{
+    top: 20.85rem;
+    left: 36rem;
+  }
+  #label-time{
+    top: 	24.6rem;
+    left: 36.65rem;
+  }
 }
