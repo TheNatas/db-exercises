@@ -54,5 +54,4 @@ const onSubmitHandler = async function(e){
 getStatesFromDatabase();
 
 document.querySelector('#btn-add').addEventListener('click', displayPlayerForm, {once: true});
-document.querySelector('.add-player-container input').addEventListener('input', function(e){this.value += e.data});
 document.querySelector('form').addEventListener('submit', onSubmitHandler);
