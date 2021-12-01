@@ -22,14 +22,14 @@ const getStatesFromDatabase = async () => {
 //   })
 // };
 
-const playerForm = document.querySelector('.add-player-container').innerHTML.slice();
+const container = document.querySelector('.add-player-container');
+const playerForm = container.innerHTML.slice();
 
 const displayNewPlayerForm = (container) => {
   container.innerHTML += playerForm;
 };
 
 const displayPlayerForm = function(){
-  const container = document.querySelector('.add-player-container');
   container.classList.remove('visually-hidden');
   this.addEventListener('click', () => displayNewPlayerForm(container));
 };

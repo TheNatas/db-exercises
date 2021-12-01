@@ -30,19 +30,21 @@ a{
   /* transition: font-weight 5s ease-in-out .5s; */
 }
 a:hover{
-  text-shadow: .2rem .2rem 1rem rgba(0, 0, 0, 0.6);
   font-weight: 700;
 }
 
 span{
   font-size: .625rem;
   position: absolute;
-  border: solid thin;
+  /* border: solid thin; */
   border-radius: .1rem;
   padding: .25rem;
   margin-left: .5rem;
   margin-top: .25rem;
+  opacity: 60%;
   background-color: #B8E4F0;
+  box-shadow: .1rem .1rem 1rem .0125rem rgba(0, 0, 0, 0.6);
+  backdrop-filter: grayscale(80%);
 }
 
 .visually-hidden{
