@@ -11,3 +11,8 @@ body{
   transform: translate(-50%, -50%);
   margin: auto;
 }
+
+.ct-label{
+  color: #F7F7F7; /* not working yet */
+  font-size: 1rem;
+}
