@@ -1,3 +1,7 @@
+body{
+  background-color: #577BC1;
+}
+
 .ct-chart{
   width: 50%;
   display: inline-block;
