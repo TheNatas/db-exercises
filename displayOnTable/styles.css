@@ -1,3 +1,33 @@
 img{
   max-height: 10rem;
 }
+
+table tbody tr{
+  cursor: pointer;
+}
+
+.overlay{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.team-players-modal{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #F7F7F7;
+  border-radius: .2rem;
+  padding: 1rem;
+  box-shadow: .1rem .1rem 1rem .75rem rgba(0, 0, 0, 0.6);
+}
+
+ul{
+  margin: 0;
+}
