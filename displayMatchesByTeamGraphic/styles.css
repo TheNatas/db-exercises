@@ -10,9 +10,24 @@ body{
   top: 50%;
   transform: translate(-50%, -50%);
   margin: auto;
+  /* @keyframes duration | easing-function | delay |
+  iteration-count | direction | fill-mode | play-state | name */
 }
 
 .ct-label{
   color: #F7F7F7; /* not working yet */
   font-size: 1rem;
+}
+
+.ct-series line{
+  animation: 3s ease-in 1s 1 normal both running slideIn;
+}
+
+@keyframes slideIn {
+  from{
+    opacity: 0%;
+  }
+  to{
+    opacity: 100%;
+  }
 }
