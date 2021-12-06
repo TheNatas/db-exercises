@@ -1,11 +1,9 @@
 const displayTable = () => {
-  document.querySelector('.overlay').classList.add('visually-hidden');
   document.querySelector('.my-card').classList.add('visually-hidden');
   document.querySelector('table').classList.remove('visually-hidden');
 };
 
 const displayLogin = () => {
-  document.querySelector('.overlay').classList.remove('visually-hidden');
   document.querySelector('.my-card').classList.remove('visually-hidden');
   document.querySelector('table').classList.add('visually-hidden');
 };

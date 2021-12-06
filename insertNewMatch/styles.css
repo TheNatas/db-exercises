@@ -4,13 +4,13 @@ body{
 }
 
 #home-team, #away-team{
-  width: 15%;
+  width: 30%;
   display: block;
   margin: auto;
 }
 
 #home-team-goals, #away-team-goals{
-  width: 4%;
+  width: 10%;
   display: block;
   margin: auto;
 }
@@ -47,4 +47,14 @@ button{
 
 .hidden{
   display: none;
+}
+
+@media screen and (min-width: 700px) {
+  #home-team, #away-team{
+    width: 15%;
+  }
+  
+  #home-team-goals, #away-team-goals{
+    width: 4%;
+  }
 }

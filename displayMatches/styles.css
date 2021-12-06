@@ -4,14 +4,35 @@ body{
 }
 
 #initial-datetime, #final-datetime{
-  width: 15%;
+  width: 30%;
   display: inline-block;
+  margin-bottom: 1rem;
+}
+
+#filter-btn{
+  display: block;
+  margin: auto;
 }
 
 hr{
-  margin: 2rem 0 1.5rem 0;
+  margin: 1rem 0 1rem 0;
 }
 
 ::placeholder{
   font-style: italic;
+}
+
+@media screen and (min-width: 700px) {
+  #initial-datetime, #final-datetime{
+    width: 15%;
+  }
+
+  #filter-btn{
+    display: inline-block;
+    margin: -.2rem 0 0 .2rem;
+  }
+
+  table{
+    margin-top: 1rem;
+  }
 }

@@ -29,6 +29,7 @@ const fillTableAsync = async () => {
 
 const overlay = document.querySelector('.overlay');
 const teamPlayersModal = document.querySelector('.team-players-modal');
+const playersTable = document.querySelector('.team-players-modal table');
 
 const hideTeamPlayers = () => {
   overlay.classList.add('visually-hidden');
@@ -40,7 +41,10 @@ const hideTeamPlayers = () => {
 const displayTeamPlayers = (players) => {
   overlay.classList.remove('visually-hidden');
   teamPlayersModal.classList.remove('visually-hidden');
+  playersTable.classList.remove('visually-hidden');
+
   if (players.length === 0){
+    playersTable.classList.add('visually-hidden');
     teamPlayersModal.querySelector('span').textContent = 'Não há jogadores desse time';
   }else{
     players.forEach(player => {

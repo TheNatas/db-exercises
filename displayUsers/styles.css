@@ -24,3 +24,8 @@ body{
   z-index: 10;
   box-shadow: .2rem .2rem 1rem 1rem rgba(0, 0, 0, 0.6);
 }
+
+table{
+  position: relative;
+  z-index: 10;
+}
