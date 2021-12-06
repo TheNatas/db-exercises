@@ -7,12 +7,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+const inputs = document.querySelectorAll('input');
 const displayError = (error) => {
-    if (error === 404)
+    if (error === 404) {
         document.querySelector('#error-login').classList.remove('visually-hidden');
-    else if (error === 400)
+        inputs[0].classList.remove('mb-3');
+    }
+    else if (error === 400) {
         document.querySelector('#error-password').classList.remove('visually-hidden');
-    document.querySelectorAll('input').forEach(input => {
+        inputs[1].classList.remove('mb-3');
+    }
+    inputs.forEach(input => {
         input.value = '';
         input.addEventListener('input', hideError, { once: true });
     });
@@ -20,6 +25,7 @@ const displayError = (error) => {
 const hideError = () => {
     document.querySelector('#error-login').classList.add('visually-hidden');
     document.querySelector('#error-password').classList.add('visually-hidden');
+    inputs.forEach(input => input.classList.add('mb-3'));
 };
 const submitForm = function (e) {
     return __awaiter(this, void 0, void 0, function* () {

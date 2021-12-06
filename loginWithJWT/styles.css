@@ -8,29 +8,54 @@
 body{
   margin: 1rem;
   background-color: #E6DF9A;
+  background-image: url('https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+}
+
+.overlay{
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
 }
 
 form{
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 25rem;
+  width: 18rem;
   border: solid thin;
   border-radius: 0.2rem;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: .2rem .2rem 1rem .75rem rgba(0, 0, 0, 0.6);
 }
 
 form h2{
   margin-bottom: 1rem;
 }
+h2:hover:after{
+  content: '!';
+}
 
-form input{
-  margin-bottom: 1rem;
+.error{
+  color: red;
+  margin: .2rem 0;
 }
 
 ::placeholder{
   font-style: italic;
+}
+
+@media screen and (min-width: 700px) {
+  body{
+    background-size: cover;
+  }
+  form{
+    width: 25rem;
+  }
 }
