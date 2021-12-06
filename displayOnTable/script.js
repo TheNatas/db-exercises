@@ -34,7 +34,7 @@ const hideTeamPlayers = () => {
   overlay.classList.add('visually-hidden');
   teamPlayersModal.classList.add('visually-hidden');
   teamPlayersModal.querySelector('span').textContent = '';
-  teamPlayersModal.querySelector('ul').innerHTML = '';
+  teamPlayersModal.querySelector('tbody').innerHTML = '';
 };
 
 const displayTeamPlayers = (players) => {
@@ -44,9 +44,20 @@ const displayTeamPlayers = (players) => {
     teamPlayersModal.querySelector('span').textContent = 'Não há jogadores desse time';
   }else{
     players.forEach(player => {
-      const li = document.createElement('li');
-      li.textContent = `${player.id} | ${player.nome} | ${player.codigo_time}`;
-      teamPlayersModal.querySelector('ul').appendChild(li);
+      const tr = document.createElement('tr');
+      const tdId = document.createElement('td');
+      const tdName = document.createElement('td');
+      const tdTeamCode = document.createElement('td');
+
+      tdId.textContent = player.id;
+      tdName.textContent = player.nome;
+      tdTeamCode.textContent = player.codigo_time;
+
+      tr.appendChild(tdId);
+      tr.appendChild(tdName);
+      tr.appendChild(tdTeamCode);
+
+      teamPlayersModal.querySelector('tbody').appendChild(tr);
     });
   }
   overlay.addEventListener('click', hideTeamPlayers);

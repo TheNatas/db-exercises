@@ -5,12 +5,14 @@ body{
 
 #home-team, #away-team{
   width: 15%;
-  display: inline-block;
+  display: block;
+  margin: auto;
 }
 
 #home-team-goals, #away-team-goals{
   width: 4%;
-  display: inline-block;
+  display: block;
+  margin: auto;
 }
 
 hr{

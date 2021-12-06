@@ -21,4 +21,6 @@ li{
 
 img{
   max-height: 10rem;
+  max-width: 200px;
+  margin: 1rem 0;
 }
